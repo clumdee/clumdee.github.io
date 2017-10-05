@@ -1,0 +1,35 @@
+title: Tua on GitHub
+description: An online playground
+
+url: http://clumdee.github.io
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Blog
+   url: /blog
+ - title: Codes
+   url: /codes
+ - title: Talks
+   url: /talks
+ # - title: Contact
+  #  url: /contact
+
+social:
+   github: clumdee
+   linkedin: in/chatdanai-lumdee
+   facebook: chatdanai.lumdee
+   twitter:
+   email: chatdanai.l@gmail.com
+
+google_analytics: "UA-96590640-1"
