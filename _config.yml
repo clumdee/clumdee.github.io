@@ -1,7 +1,7 @@
 title: Tua on GitHub
 description: An online playground
 
-url: http://clumdee.github.io
+url: https://clumdee.github.io
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
