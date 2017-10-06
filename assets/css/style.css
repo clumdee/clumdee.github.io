@@ -225,7 +225,7 @@ dd{margin:0 0 1.5rem}
 
 @media only screen and (min-width:800px){.content{padding-top:0;position:relative;z-index:1}
 .content:after{z-index:-1;background:#fff;content:"";display:block;width:100%;height:10em;position:absolute;top:-2em;left:0;-webkit-transform:skewY(-2deg);transform:skewY(-2deg);-webkit-transform-origin:bottom left;transform-origin:bottom left}
-.container{max-width:800px;margin-left:auto;margin-right:auto;padding:0}
+.container{max-width:720px;margin-left:auto;margin-right:auto;padding:0}
 #home .pageTitle,#home .pagination,#home .posts{width:75%;float:none;margin:0 auto 1.5em}
 #home .pageTitle{margin:2rem auto 1em}
 .header{height:15em;position:relative;padding-bottom:2em}
