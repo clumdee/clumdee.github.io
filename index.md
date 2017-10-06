@@ -11,7 +11,7 @@ On this page I blog [articles]({{ site.url }}/blog) that reflect thoughts at cer
 
 Please let me know if you have any questions or suggestions. I am eagerly looking forward to learning many new things from you.
 
-Let the fun begins ~
+Let the fun begin ~
 
 <figure>
 	<img src="{{ '/assets/img/Me_doing_SEM.png' | prepend: site.baseurl }}" alt="">
