@@ -13,9 +13,9 @@ categories: code_python
 
 บทความนี้จะพูดถึงหลักการทำงานของ SOM แบบง่ายๆ โดยใช้ต้วอย่างการจัดกลุ่ม pokemons จากนั้นจะพูดถึงการ update map พร้อมตัวอย่าง code และปิดท้ายด้วยการใช้ข้อมูลจริงเพื่อแสดงตัวอย่างการจัดเรียงกลุ่มประเทศโดยใช้ข้อมูลผลิตภัณฑ์มวลรวมต่อประชากร (GDP per capita) และดัชนีความเหลื่อมล้ำทางรายได้ (income inequality index)
 
-# หลักการของ Self-organizing map
+## หลักการของ Self-organizing map
 
-##  จัดข้อมูลลง map
+###  จัดข้อมูลลง map
 
 อย่างที่ได้เกริ่นไว้ว่า SOM นั้นสามารถจัดเรียงหมวดหมู่ของข้อมูลให้เราได้เอง ซึ่งการจะเรียงหมวดหมู่ข้อมูลนั้นก็ต้องมีช่องให้เราทำการจำแนกข้อมูลใช่มั้ยครับ ดังนั้น สิ่งแรกที่เราจะทำก็คือการออกแบบการจัดวางช่องพวกนี้หรือการออกแบบ map นั่นเองล่ะครับ โดยตัวอย่างง่ายๆ ก็คือใช้ map แบบ 2D นี่ล่ะครับ
 
@@ -32,7 +32,7 @@ categories: code_python
 
 เป็นไงครับ ง่ายสุดๆ ไปเลย
 
-## จัดระเบียบ map โดยการ update ค่า features
+### จัดระเบียบ map โดยการ update ค่า features
 
 ทีนี้เราลองมานึกดูว่า ทำอย่างไรเราถึงจะทำให้จัดแยก pokemons ลงช่องต่างๆ นั้น เป็นระบบระเบียบ เพื่อที่จะสามารถช่วยให้เราจำแนกประเภทของ pokemons ได้ง่าย
 
@@ -68,10 +68,10 @@ categories: code_python
 
 ข้อควรระวังก็คือ เราต้องแน่ใจว่าเราทำซ้ำกระบวนการขั้นตอนที่ **6** มากพอจน SOM นั้น stable ซึ่งจำนวนรอบนี้ก็ขึ้นอยู่กับอัตราที่เราใช้ลดขนาด neighbor selection ในขั้นตอนที่ **3** และใช้ลดค่าระดับการ update ในขั้นตอนที่ **4** ซึ่งถ้ามากเกินไป SOM ก็จะ stable (หยุด update) ก่อนที่การข้อมูลจะแยกกันชัดเจน (*ส่วนนี้เป็นรายละเอียดย่อย ถ้าอ่านแล้วงง ให้ไปดูตรงส่วน code แล้วค่อยกลับมาดูใหม่ครับ*)
 
-## จบแล้ว สำหรับหลักการแบบง่ายๆ ของ SOM หรือ self-organizing map
+### จบแล้ว สำหรับหลักการแบบง่ายๆ ของ SOM หรือ self-organizing map
 ในส่วนต่อไปจะแสดงตัวอย่าง code สำหรับทำ SOM โดยจะลงรายละเอียดมากขึ้นครับ
 
-# SOM with python
+## SOM with python
 
 ข้างล่างนี้คือตัว `class SOM` ที่ทำขึ้นบน python ครับ โดยสร้างบนพื้นฐานการคำนวน SOM จาก [lecture note](http://labs.seas.wustl.edu/bme/raman/Lectures/Lecture10_CompetitiveLearning.pdf) นี้
 
@@ -156,12 +156,12 @@ class SOM():
 ```
 
 
-# ใช้ SOM แยกกลุ่มประเทศตาม GDP/cap และ income inequality
+## ใช้ SOM แยกกลุ่มประเทศตาม GDP/cap และ income inequality
 
 เมื่อสร้าง `class SOM` แล้ว เราก็มาลองใช้กันดู โดยข้อมูลที่ผมดึงมาทดสอบเป็นข้อมูล GDP per capita (ผลิตภัณฑ์มวลรวมภายในประเทศต่อประชากร) และ income inequality index (ดัชนีความเหลื่อมล้ำทางรายได้) ของประเทศต่างๆ โดยนำข้อมูลมาจาก [https://ourworldindata.org/](https://ourworldindata.org/).
 
 
-## การเตรียมข้อมูล
+### การเตรียมข้อมูล
 ขอกล่าวสั้นๆ เรื่องการเตรียม data ว่าเป็นชุดข้อมูลจากปี 2012 ของกลุ่มของ 72 ประเทศ ที่มีทั้งค่า GDP/cap และ Income inequality ที่ได้ปรับ standardize ค่าทั้งสองให้ mean=0 และ SD=1 จากนั้นจึงสุ่มมา 10 ประเทศ ที่จะใช้เป็นตัวอย่างในการแสดงการแบ่งกลุ่มข้อมูลโดยใช้ SOM
 
 ตัวอย่างข้อมูลของห้าประเทศแรกใน list ก่อนและหลัง standardize เป็นดังนี้ครับ
@@ -170,8 +170,6 @@ class SOM():
 ```python
 data.head()
 ```
-
-
 
 
 <div>
@@ -239,13 +237,9 @@ data.head()
 </div>
 
 
-
-
 ```python
 data_normalize.head()
 ```
-
-
 
 
 <div>
@@ -327,8 +321,6 @@ sampling['FOM'] = (sampling.GDP_cap) + (sampling.income_inequality_index*-1)
 
 sampling
 ```
-
-
 
 
 <div>
@@ -448,7 +440,8 @@ sampling_data = sampling[['GDP_cap','income_inequality_index']].values
 sampling_record = sampling[['GDP_cap','income_inequality_index']].values
 ```
 
-## SOM training
+
+### SOM training
 
 หลังจากเตรียมข้อมูลแล้วเราก็กำหนดตัวแปรเริ่มต้น เพื่อ train SOM ครับ
 input_features = 2 (คือ GDP/cap และ income inequality)
@@ -472,7 +465,6 @@ learning_decay = 10
 neighbor_init = 10
 neighbor_decay = 20
 ```
-
 
 ```python
 weight_map = SOM(input_features, map_size, learning_rate_init, learning_decay, neighbor_init, neighbor_decay)
@@ -500,11 +492,10 @@ cbar.set_label('Figure of merit', fontsize=18, rotation=90)
 plt.show()
 ```
 
-
 ![Country mapping with SOM]({{ site.url }}/assets/img/SOM/05.png)
 
 
-## สรุปผลการแยกกลุ่มประเทศโดย SOM
+### สรุปผลการแยกกลุ่มประเทศโดย SOM
 
 เห็นว่าตอนแรกสีของ FOM จัดอย่างสุ่มและกลุ่มประเทศก็กระจายตัวกันโดยไม่มีแบบแผนที่เราจะจัดกลุ่มได้
 
@@ -519,7 +510,8 @@ plt.show()
 
 โดยเรายังสามารถใช้ algorithm อื่น เช่น k-means clustering เพื่อช่วยในการแบ่งกลุ่มข้อมูลให้ดียิ่งขึ้น
 
-# บทส่งท้าย
+
+## บทส่งท้าย
 
 จบแล้วครับสำหรับหลักการและตัวอย่างการใช้ self-organizing map ที่สามารถเอาไปใช้ช่วยในการแสดงผลและจัดกลุ่มข้อมูล โดยนอกจากตัวอย่างการจัดกลุ่มประเทศตาม GDP/cap และ income inequality index ที่แสดงเป็นตัวอย่างแล้ว ยังสามารถนำไปใช้ประโยชน์ได้หลากหลาย ไม่ว่าจะในทางการศึกษาวิจัยหรือในทางธุรกิจ
 
@@ -535,8 +527,3 @@ plt.show()
 ข้อ 1 และ 2 นั้นผมเองไม่ทราบชัดว่าจริงๆ แล้วมีขั้นตอนการแก้ไข หรือกระบวนการที่เค้าใช้จัดการความท้าทายนี้อย่างไร หากใครทราบรายละเอียดรบกวนช่วยชี้แนะด้วยนะครับ
 
 สุดท้าย หากมีข้อสงสัย คำแนะนำ หรือส่วนที่ต้องการให้แก้ไข เชิญส่งข้อความมาได้ครับ ทั้งทาง [Facebook](https://facebook.com/chatdanai.lumdee), [LinkedIn](https://linkedin.com/in/chatdanai-lumdee) หรือ <chatdanai.l@gmail.com>
-
-
-```python
-
-```
