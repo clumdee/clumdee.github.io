@@ -9,7 +9,7 @@ title: Talks
 * 2015-10-30 » [Nanoscale Control of Gap-Plasmon Enhanced Optical Processes]({{ site.url }}/talks/talks-pdf/2015-10-30_PhD-defense_Gap-Plasmon.pdf)
 
 ### Guest presentations
-* 2017-12-14 » [Siriraj Hospital -- 2nd International SiMPC Workshop: Metabolomics and Beyond; Manipulating Light at the Nanoscale: Gap-Plasmon Enhanced Optical Processes]({{ site.url }}/talks/talks-pdf/2017-12-14_Siriraj_Nanosensors.pdf)
+* 2017-12-14 » [Siriraj Hospital -- 2nd International SiMPC Workshop: Metabolomics and Beyond; Nano-biosensors for medical research and services]({{ site.url }}/talks/talks-pdf/2017-12-14_Siriraj_Nanosensors.pdf)
 * 2017-02-3,6,17 » Chulalongkorn University, Naresuan University, King Mongkut's Institute of Technology Ladkrabang; Nano-optics with a spin: interplay between light and magnetism at the nanoscale -- *will be posted when results are ready to be made public*
 * 2016-02-23 » [Mahidol University; Manipulating Light at the Nanoscale: Gap-Plasmon Enhanced Optical Processes]({{ site.url }}/talks/talks-pdf/2016-02-23_Guest-Mahidol_ManipulatingLightAtNanoscale.pdf)
 * 2013-12-12 » [CREOL's Graduate Research Symposium; Film-coupled Nanoparticle Structures for Controlled Plasmonic Resonances]({{ site.url }}/talks/talks-pdf/2013-12-12_CREOL-StudentTalk_Film-coupledNPs.pdf)
