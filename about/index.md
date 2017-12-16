@@ -4,12 +4,13 @@ title: About me
 ---
 
 ## Nice to meet you!
-<!-- <img src="HalfMara.jpg" style="float:right;width:140px;" hspace="10"> -->
 My name is Chatdanai Lumdee, or 'Tua'. I am a native Thai grew up in [Phitsanulok](https://www.google.com/maps/place/Phitsanulok,+Nai+Mueang,+Mueang+Phitsanulok+District,+Phitsanulok+65000,+Thailand/@11.8104278,100.9371339,5.71z/data=!4m5!3m4!1s0x30df97e77e746631:0x371aaafbdf6cd038!8m2!3d16.8211238!4d100.2658516), a city 400 km to the north of Bangkok. During high school, my sister gave me a book, [The Next Big Thing Is Really Small](https://www.amazon.com/Next-Thing-Really-Small-Nanotechnology/dp/1400046890), which initiated my interest nanoscience. This serves as a reference point leading to my career in the field where I later developed a specialty in nanophotonics.
 
-After some years of PhD in Florida and postdoc in Sweden, I grew a keen interest in data science. Following some time of teaching myself and conducting a few [personal projects]({{ site.url }}/codes), I decided to make a career switch.
+After some years of PhD in Florida and postdoc in Sweden, I grew a keen interest in data science. Following some time of self-studying and conducting small [personal projects]({{ site.url }}/codes), I decided to join and get a flavor of this fast growing field.
 
 Currently, I am a data scientist at [Kasikorn Business-Technology Group (KBTG)](http://www.kbtg.tech/en) in Bangkok, Thailand. The company is part of [Kasikornbank (KBank)](https://en.wikipedia.org/wiki/Kasikornbank) that has been entrusted to act as a developer and to work in partnership with FinTech firms and tech-startups to explore financial innovations.
+
+I am always open for opportunities that I can use my skills in either (or both) nanophotonics and data science to help drive your projects. Please feel free to contact me.
 
 
 ## Research careers in nanotechnology, optics, and photonics
