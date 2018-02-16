@@ -128,25 +128,25 @@ hashtags = [hashtag.lower() for hashtag in re.split('\s+', tweets) if len(hashta
 hashtags
 ```
 
-  ['#talkwithtoey',
-   '#bnk48',
-   '#bnk48',
-   '#katebnk48',
-   '#bnk48',
-   '#namsaibnk48',
-   '#jennisbnk48',
-   '#bnk48',
-   '#kaewbnk48',
-   '#bnk48',
-   '#bnk48',
-   '#ornbnk48',
-   '#ornbnk48',
-   '#bnk48',
-   '#bnk48sweetcall',
-   '#bnk48',
-   '#jennisbnk48',
-   '#bnk48',
-   '#cherprangbnk48']
+    ['#talkwithtoey',
+     '#bnk48',
+     '#bnk48',
+     '#katebnk48',
+     '#bnk48',
+     '#namsaibnk48',
+     '#jennisbnk48',
+     '#bnk48',
+     '#kaewbnk48',
+     '#bnk48',
+     '#bnk48',
+     '#ornbnk48',
+     '#ornbnk48',
+     '#bnk48',
+     '#bnk48sweetcall',
+     '#bnk48',
+     '#jennisbnk48',
+     '#bnk48',
+     '#cherprangbnk48']
 
 
 ## Technical part 3 -- จัดลำดับ hashtags และทำหน้าจอแสดงผลแบบ real-time
@@ -221,25 +221,9 @@ while datetime.now() < finish_time:
 
 ```
 
-## Ready. Set. Go!
+## Ready. Set. Go! -- สำรวจความนิยมของเหล่าไอดอล BNK48 ในคืนวัน Valentine
 
-หลังจากเรามี code ทุกอย่างเรียบร้อยแล้วก็ทำการ run ทุกอย่างตามที่เขียนไว้ในส่วน **Technical part 2** และ **Technical part 3** ได้เลยครับ
-
-ก็จะได้ chart ออกมาประมาณนี้ โดยตัว chart จะ update ตัวเองเรื่อยๆ ตามที่ตั้งไว้
-
-![bnk_ranking]({{ site.url }}/assets/img/twitterBNK48/bnk_ranking.png)
-
-เมื่อเราทำการ streaming จนพอใจแล้วก็ปิดการ streaming ด้วยคำสั่งนี้ครับ
-
-
-```python
-# close the connection
-s.close()
-```
-
-ปล. อย่าลืมไปปิดตัว terminal ที่รัน python script (streamingTwitterTags.py) เชื่อมต่อกับ Twitter API ด้วยนะครับ
-
-## สรุปผลการสำรวจความนิยมของเหล่าไอดอล BNK48 แบบ real-time ในคืนวัน Valentine
+หลังจากเรามี code ทุกอย่างเรียบร้อยแล้วก็ทำการ run ทุกอย่างตามที่เขียนไว้ในส่วน **Technical part 2** และ **Technical part 3** ได้เลยครับ โดยก็จะได้ chart ที่ update ตัวเองเรื่อยๆ ตามที่ตั้งไว้
 
 ผมก็ได้ทดสอบ code ที่เราทำขึ้นในคืนวันวาเลนไทน์ ช่วงเวลา 21.15-22.15 นะครับ เรามาดูกันว่าสาวๆ BNK48 คนไหนบ้างที่มีชาว Twitter พูดถึงกันมากที่สุดในช่วงค่ำของวันวาเลนไทน์ (ย่นเวลาแสดงผลเหลือ 30 วินาที)
 
@@ -252,6 +236,16 @@ s.close()
 ![bnk_ranking_with_time]({{ site.url }}/assets/img/twitterBNK48/bnk_ranking_with_time.png)
 
 โดยใน line plot นะครับ ก็จะเห็นว่าการขับเคี่ยวระหว่าง #cherprangbnk48 กับ #punbnk48 นั้น มีช่วงที่ #cherprangbnk48 โดนทิ้งห่างไปเป็นระยะเวลานานกว่า 20 นาทีเลยทีเดียว แต่ก็กลับมาสูสีกันอีกครั้งในตอนท้ายๆ นอกจากนี้ก็ยังเห็นข้อสังเกตอื่นๆ เช่น จำนวนคนพูดถึง #musicbnk48 ที่เกิดขี้นในระยะเวลา 60 นาทีนั้น อยู่ในระดับเดียวกับจำนวนคนพูดถึง #cherprangbnk48 กับ #punbnk48 ในเวลาเพียงแค่ 40 นาที
+
+
+#### เมื่อเราทำการ streaming จนพอใจแล้วก็ปิดการ streaming ด้วยคำสั่งนี้ครับ
+
+```python
+# close the connection
+s.close()
+```
+
+ปล. อย่าลืมไปปิดตัว terminal ที่รัน python script (streamingTwitterTags.py) เชื่อมต่อกับ Twitter API ด้วยนะครับ
 
 
 ## ส่งท้าย
