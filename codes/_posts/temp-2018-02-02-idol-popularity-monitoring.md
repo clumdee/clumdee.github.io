@@ -84,15 +84,8 @@ post นี้จะไม่ลงรายละเอียดมาก ส�
 หน้าตาของ code ก็มีดังข้างล่าง โดยกรอกค่า "host" และ ค่า "port" ที่เราตั้งไว้ตามบรรทัดที่ 51 และ 53 ใน streamingTwitterTags.py
 
 
-```python
-import socket
+{% gist a4ca42f3603aa71fbfddbba5072d8f7b 01_connect.py %}
 
-# connect to a streaming socket
-s = socket.socket()
-host = '127.0.0.1' # needs to be in quote
-port = 5555
-s.connect((host, port))
-```
 
 ทีนี้เราก็พร้อมที่จะทดสอบระบบ โดยเริ่มจากสั่ง run script สำหรับ streaming ก่อน
 
@@ -109,11 +102,8 @@ s.connect((host, port))
 เลข 4096 คือ จำกัดขนาดของ byte size ที่เราจะเรียกมาแต่ละครั้ง ถ้าข้อมูลบน stream ของเรา ณ เวลานั้นๆ มีมากกว่าขนาดที่จำกัดไว้ ส่วนที่ไม่ถูกเรียกมาในครั้งนั้นๆ จะถูกเก็บไว้และถูกเรียกมาในครั้งต่อไป -- ถ้าไม่คิดมากใส่ 4096 ไว้ก็เพียงพอสำหรับเรื่องที่เราจะทดสอบ
 
 
-```python
-# get tweets
-tweets = s.recv(4096).decode("utf-8", errors='ignore')
-tweets
-```
+{% gist a4ca42f3603aa71fbfddbba5072d8f7b 02_getTweets.py %}
+
 
   *'RT @5k8_ea: ทอล์ก-กะ-เทย Tonight วันที่ 18 ก.พ. \n\n#talkwithtoey #BNK48 \n\nhttps://t.co/ps8L5i6o8o https://t.co/6UPYvWpEDpRT @zi_patpat: ถ่ายโอชิตัวเองมันก็จะประมาณนี้แหล่ะ #bnk48 #KateBNK48 https://t.co/bzMs7QmaYIRT @nlessblogger: อาจารย์\u200bเจษฎ์น\u200bี่\u200bเองเป็นแกนนำ ^_^\n :เปิดใจ ตัวแทนกลุ่มคนรักมิวสิค BNK48 ขั้นตอนทำป้าย VR เบิร์ดเดย์ ส่งกำลังใจถึง มิวสิค…RT @Shimuzik: น้ำใส ไหลเย็น เห็นตัวปลาาาาาาาา ~~~~~~ (ฅΦωΦ)ฅ\n#BNK48 #NamsaiBNK48 https://t.co/ZbEyu22T0sRT @punjennis_th: [IG Jennis] พรุ่งนี้มี 2 งานเลย ไปเจอน้องกันนะคะ😍 #JennisBNK48 #BNK48 https://t.co/vTsQeo0mB7RT @jorhorkor48: ฮิ ฮิ~ 😆 ทำไมนี่ยิ้มตาม #KaewBNK48 #BNK48 https://t.co/cI1QFDQ1njRT @cholthiS: นี่ไอดอลหรือคณะตลก\n ก. มิวสิคมีแปรงสีฟัน แต่จิ้งจกขโมยยาสีฟัน\n ข. ปัญกับเจนนิษส์ไม่มียาสีฟันทั้งคู่\n ค. เฌอมียาสีฟัน แต่ไม่มี…RT @fontaku_: กระจกแถวนั้นแตกหมดยังคะ... \n#BNK48 #OrnBNK48 https://t.co/YSZRF8ncq1RT @jnptt_: โอ้โหยอมแล้ว ตายตายไปแล้ว #OrnBNK48 #BNK48 #BNK48Sweetcall https://t.co/hYGIV3J59GRT @rightmen0w: น้องสาวครับ~  อึ๋ย    ไม่ทันได้ตั้งรับเธอก็เข้ามาโจมตี  #BNK48  #JennisBNK48 https://t.co/AXzDfhLlmuRT @Teeny_SD: รีแอคชั่นของกันและกันระหว่างน้ำหนึ่งกับตาวานตอนออดิชั่น ต่างคนต่างทึ่งอีกฝ่าย5555555555\n\nนน: ดูสกิลตาวานอ่ะ นี่ถึงขนาดอึ้ง หา…RT @genjii_i: ทำไม ทำไม ทำกับน้องแบบนี้ 55555 เฌอของเกน #BNK48 #cherprangbnk48 https://t.co/rp67s4SAtA'*
 
@@ -122,13 +112,8 @@ tweets
 จากนั้น เราก็กรองเฉพาะ hashtags ออกจากข้อความใน tweets ครับ
 
 
-```python
-# get hashtags from tweets
-import re
+{% gist a4ca42f3603aa71fbfddbba5072d8f7b 03_filterHashtags.py %}
 
-hashtags = [hashtag.lower() for hashtag in re.split('\s+', tweets) if len(hashtag)>0 and hashtag[0]=="#"]
-hashtags
-```
 
     ['#talkwithtoey',
      '#bnk48',
@@ -167,62 +152,8 @@ hashtags
     * clear ส่วนแสดงผลของรอบก่อนหน้า, แสดงเวลาเริ่มต้นดึงข้อมูลและเวลาปัจจุบัน, แสดง bar chart การจัดลำดับที่ทำไว้
 
 
-```python
-import time
-import re
-from datetime import datetime, timedelta
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.ticker import MaxNLocator
-from IPython import display
+{% gist a4ca42f3603aa71fbfddbba5072d8f7b 04_main.py %}
 
-%matplotlib inline
-
-# record start time and set streaming period
-start_time = datetime.now()
-stream_period = 60  # in minutes
-finish_time = start_time + timedelta(minutes=stream_period)
-
-# create a blank Pandas DataFrame
-df = pd.DataFrame([], columns=['hashtag','time_(s)'])
-
-# iterative streaming and plotting
-while datetime.now() < finish_time:
-
-    # set wait time between iteration
-    wait_time = 10 # in seconds
-    time.sleep(wait_time)    
-    stream_time = datetime.now()
-
-    # get tweets and hashtags
-    tweets = s.recv(4096).decode("utf-8", errors='ignore')
-    hashtags = [hashtag.lower() for hashtag in re.split('\s+', tweets) if len(hashtag)>0 and hashtag[0]=="#"]
-
-    # store and count hashtags in Pandas DataFrame
-    temp_df = pd.DataFrame({'hashtag':hashtags,'time_(s)':(stream_time-start_time).seconds})
-    df = pd.concat([df, temp_df])
-    results = df.groupby('hashtag')['hashtag'].count().sort_values(ascending=False).reset_index(name='count').head(11)
-
-    # number of '#bnk48'
-    bnk48_count = results[results['hashtag']=='#bnk48']['count'].values
-
-    # create bar chart ranking top ten hashtags related to '#bnk48'
-    fig, ax = plt.subplots(1,1,figsize=(12,6))
-    results[results['hashtag']!='#bnk48'].plot(kind='bar', x='hashtag', y='count', legend=False, ax=ax)
-    ax.set_title("Top 10 hashtags related to #BNK48 (%d counts)" % bnk48_count, fontsize=18)
-    ax.set_xlabel("Hashtag", fontsize=18)
-    ax.set_ylabel("Count", fontsize=18)
-    ax.set_xticklabels(ax.get_xticklabels(), {"fontsize":14}, rotation=30)
-    ax.yaxis.set_major_locator(MaxNLocator(integer=True)) # show only integer yticks
-    plt.yticks(fontsize=14)
-
-    # clear previous output, print start time and current time, and plot the current chart
-    display.clear_output(wait=True)
-    print("start time:", start_time.strftime('%Y-%m-%d %H:%M:%S'))
-    print("stream time:", stream_time.strftime('%Y-%m-%d %H:%M:%S'))
-    plt.show()
-
-```
 
 ## สำรวจความนิยมของเหล่าไอดอล BNK48 ในคืนวัน Valentine
 
@@ -243,10 +174,8 @@ while datetime.now() < finish_time:
 
 #### เมื่อเราทำการ streaming จนพอใจแล้วก็ปิดการ streaming ด้วยคำสั่งนี้ครับ
 
-```python
-# close the connection
-s.close()
-```
+{% gist a4ca42f3603aa71fbfddbba5072d8f7b 05_close.py %}
+
 
 ปล. อย่าลืมไปปิดตัว terminal ที่รัน python script (streamingTwitterTags.py) เชื่อมต่อกับ Twitter API ด้วยนะครับ
 
