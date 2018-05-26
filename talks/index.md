@@ -9,6 +9,7 @@ title: Talks
 * 2015-10-30 » [Nanoscale Control of Gap-Plasmon Enhanced Optical Processes]({{ site.url }}/talks/talks-pdf/2015-10-30_PhD-defense_Gap-Plasmon.pdf)
 
 ### Guest presentations
+* 2018-05-26 » [Thammasat University -- seminar, Master of Business Administration program; Intro to data science: development, use cases, and prospect]({{ site.url }}/talks/talks-pdf/2018-05-26_Intro_data science.pdf) with [a project demo -- England's premier league prediction]({{ site.url }}/talks/talks-pdf/2018-05-26_data_science_workflow.html)
 * 2018-02-02 » [Chulalongkorn University -- seminar, Nano-Engineering program; Intro to Nanophotonics: plasmonics and applications]({{ site.url }}/talks/talks-pdf/2018-02-02_Intro_plasmonics_and_applications.pdf)
 * 2018-01-24 » [Thammasat University -- seminar, Master of Business Administration program; Intro to data science: development, use cases, and prospect]({{ site.url }}/talks/talks-pdf/2018-01-24_Intro_data science.pdf)
 * 2017-12-14 » [Siriraj Hospital -- 2nd International SiMPC Workshop: Metabolomics and Beyond; Nano-biosensors for medical research and services]({{ site.url }}/talks/talks-pdf/2017-12-14_Siriraj_Nanosensors.pdf)
