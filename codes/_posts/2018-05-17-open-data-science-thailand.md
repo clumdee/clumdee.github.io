@@ -284,8 +284,7 @@ traces = []
 hover_text = []
 
 for xd, cls in zip(x_data, barcolors):
-    temp_df = govSpendCntrct.loc[govSpendCntrct['org_name']=='หน่วยงานอื่นของรัฐที่จัดตั้งโดยกฎหมายเฉพาะ','contrct_price']
-
+    temp_df = govSpendCntrct.loc[govSpendCntrct['org_name']==xd,'contrct_price']
     q1_mark = temp_df.quantile(0.25)
     q3_mark = temp_df.quantile(0.75)
 
@@ -383,6 +382,9 @@ plt.show()
 # original data from https://data.go.th/DatasetDetail.aspx?id=8d13d593-aea4-40b9-ad78-884da8a49e35
 # note: the original data was re-encoded to utf8 to work with pandas
 df = pd.read_csv('ThailandReferendum2016_regular.csv', skiprows=3, header=[0,1])
+
+
+# This file only maps Thai to English version of provinces
 province_pair = pd.read_csv('thaiProvinces.csv', header=None, names=['จังหวัด','Province'])
 
 arrays = [['จังหวัด', 'ภาค', 'ผู้มีสิทธิออกเสียง', 'ผู้มาใช้สิทธิออกเสียง', 'มาใช้สิทธิ์ร้อยละ',
