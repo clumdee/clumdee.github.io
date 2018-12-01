@@ -8,9 +8,11 @@ My name is Chatdanai Lumdee, or 'Tua'. I am a native Thai grew up in [Phitsanulo
 
 After some years of PhD in Florida and postdoc in Sweden, I grew a keen interest in data science. Following some time of self-studying and conducting small [personal projects]({{ site.url }}/codes), I decided to join and get a flavor of this fast growing field.
 
-Currently, I am a data scientist at [Kasikorn Business-Technology Group (KBTG)](http://www.kbtg.tech/en) in Bangkok, Thailand. The company is part of [Kasikornbank (KBank)](https://en.wikipedia.org/wiki/Kasikornbank) that has been entrusted to act as a developer and to work in partnership with FinTech firms and tech-startups to explore financial innovations.
+I embarked on the field as a data scientist at [Kasikorn Business-Technology Group (KBTG)](http://www.kbtg.tech/en) in Bangkok, Thailand. The company is part of [Kasikornbank (KBank)](https://en.wikipedia.org/wiki/Kasikornbank) that has been entrusted to act as a developer and to work in partnership with FinTech firms and tech-startups to explore financial innovations.
 
-I am always open for opportunities that I can use my skills in either (or both) nanophotonics and data science to help drive your projects. Please feel free to contact me.
+Currently, I am part of ASEAN [Accenture Applied Intelligence](https://www.accenture.com/th-en/applied-intelligence-index) within [Accenture Digital](https://www.accenture.com/us-en/digital-index). Our tasks are to apply big data and analytics expertises to help businesses, organizations, and governments redefine how they serve connected customers and operate their connected enterprises.
+
+I am always open for opportunities that I can use my skills in either nanophotonics or data science to help drive your projects. Please feel free to drop a message.
 
 
 ## Research careers in nanotechnology, optics, and photonics
