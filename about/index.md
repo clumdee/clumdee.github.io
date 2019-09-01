@@ -10,7 +10,9 @@ After some years of PhD in Florida and postdoc in Sweden, I grew a keen interest
 
 I embarked on the field as a data scientist at [Kasikorn Business-Technology Group (KBTG)](http://www.kbtg.tech/en) in Bangkok, Thailand. The company is part of [Kasikornbank (KBank)](https://en.wikipedia.org/wiki/Kasikornbank) that has been entrusted to act as a developer and to work in partnership with FinTech firms and tech-startups to explore financial innovations.
 
-Currently, I am part of ASEAN [Accenture Applied Intelligence](https://www.accenture.com/th-en/applied-intelligence-index) within [Accenture Digital](https://www.accenture.com/us-en/digital-index). Our tasks are to apply big data and analytics expertises to help businesses, organizations, and governments redefine how they serve connected customers and operate their connected enterprises.
+I then joined ASEAN [Accenture Applied Intelligence](https://www.accenture.com/th-en/applied-intelligence-index) within [Accenture Digital](https://www.accenture.com/us-en/digital-index). The mission of the team is to apply big data and analytics expertises to help businesses, organizations, and governments redefine how they serve connected customers and operate their connected enterprises.
+
+Currently, I work as a data analyst at [Agoda](https://www.agoda.com/), one of the fastest-growing online hotel platforms and is part of [Booking Holdings Inc.](https://www.bookingholdings.com/). At Agoda, we believe that travel opens minds to new ideas, cultures and ways of thinking. Our mission is to make travel affordable, accessible and easily available to customers around the world.
 
 I am always open for opportunities that I can use my skills in either nanophotonics or data science to help drive your projects. Please feel free to drop a message.
 
