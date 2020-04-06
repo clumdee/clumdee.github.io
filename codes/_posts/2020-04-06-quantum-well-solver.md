@@ -7,7 +7,7 @@ categories: code_python
 
 ## Introduction
 
-We developed an interactive demo that calculates solutions of 1-D Schrödinger equation. These solutions represent energy states and electron wavefunctions of a 1-D quantum confinement structure, such as a [quantum well (QW)](https://en.wikipedia.org/wiki/Quantum_well). The calculation is based on [*finite difference method*](https://en.wikipedia.org/wiki/Finite_difference_method).
+We developed an interactive demo that calculates solutions of 1-D [Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation). These solutions represent energy states and electron wavefunctions of a 1-D quantum confinement structure, such as a [quantum well (QW)](https://en.wikipedia.org/wiki/Quantum_well). The calculation is based on [*finite difference method*](https://en.wikipedia.org/wiki/Finite_difference_method).
 
 The demo allows a user to define essential parameters of a QW to solve. For example, width and energy levels of the conduction band of materials. Once solved, available energy states and electron wavefunctions of a QW are presented in an interactive format.
 
