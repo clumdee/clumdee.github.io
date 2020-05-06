@@ -12,7 +12,7 @@ categories: code_python
 
 
 ### Set up services for PATH 2
-Note: I will use a Raspberry Pi Azure IoT Online Simulator to simulate HOME for demonstration.
+Note: I will use a [Raspberry Pi Azure IoT Online Simulator](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-raspberry-pi-web-simulator-get-started) to simulate HOME for demonstration.
 
 
 #### 1. Create and send test data to Azure IoT Hub
