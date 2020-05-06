@@ -5,7 +5,7 @@ title: Welcome page
 
 ## Hello there :)
 
-Thank you for dropping by. As you stumbled upon this site, I presume are on a track to learn something new. I hope the contents provided here could be useful to you.
+Thank you for dropping by. As you stumbled upon this site, I presume you are on a track to learn something new. I hope the contents provided here could be useful to you.
 
 On this page I blog [articles]({{ site.url }}/blog) that reflect thoughts at certain stages of life such as graduation and experiencing new culture. I also write about [projects in data science]({{ site.url }}/codes) describing motivations, fundamental concepts, and logic behind. The projects range from [data exploration]({{ site.url }}/blog/thailand-wages-by-occupation_full-code), [blockchain]({{ site.url }}/blog/blockchain-DIY-with-python), [recommender systems]({{ site.url }}/blog/recommender-system-with-python), [twitter streaming]({{ site.url }}/blog/idol-popularity-monitoring/), and [cloud platform]({{ site.url }}/blog/your-weather-station-with-azure-part1/).
 
