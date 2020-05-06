@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Your Weather Station in the Cloud with Azure; Part 1: Requirements and Data Architecture"
+title: "Your Weather Station in the Cloud with Azure, Part 1: Requirements and Data Architecture"
 date: 2020-05-06
 categories: code_python
 ---
 
 ## Project: Your Home in the Cloud - Weather Monitoring with Azure
-[Part 1: Requirements and Data Architecture]() **(We are here)**
+[Part 1: Requirements and Data Architecture](https://clumdee.github.io/blog/your-weather-station-with-azure-part1/) **(We are here)**
 <br>
-[Part 2: Implementation]()
+[Part 2: Implementation](https://clumdee.github.io/blog/your-weather-station-with-azure-part2/)
 
 ### Motivations
 1. Make use of a Raspberry Pi in a storage
@@ -38,7 +38,7 @@ I propose 3 paths that can accomplish our requirements. Simply based on Azure se
 
 All paths start at HOME where a Raspberry Pi collects sensors’ data and sends to Azure. This checks requirement (1).
 
-Note that the HOME part can be simulated using a Raspberry Pi Azure IoT Online Simulator. No physical sensors and Raspberry Pi are needed. Check https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-raspberry-pi-web-simulator-get-started.
+Note that the HOME part can be simulated using a Raspberry Pi Azure IoT Online Simulator. No physical sensors and Raspberry Pi are needed. Check [https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-raspberry-pi-web-simulator-get-started](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-raspberry-pi-web-simulator-get-started).
 
 ![weather_station_data_architecture]({{ site.url }}/assets/img/weather_station_azure/p1_azure-iot-architect.png)
 
@@ -67,4 +67,4 @@ Anyhow, I would recommend trying all the 3 paths. And other solutions. It was a 
 ### End
 That concludes the requirements and data architecture of our project.
 
-We will go through the implementation steps in the next post -- [Part 2: Implementation]().
+We will go through the implementation steps in the next post -- [Part 2: Implementation](https://clumdee.github.io/blog/your-weather-station-with-azure-part2/).

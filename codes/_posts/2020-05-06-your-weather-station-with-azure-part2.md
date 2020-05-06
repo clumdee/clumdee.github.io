@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Your Weather Station in the Cloud with Azure; Part 2: Implementation"
+title: "Your Weather Station in the Cloud with Azure, Part 2: Implementation"
 date: 2020-05-06
 categories: code_python
 ---
 
 ## Project: Your Home in the Cloud - Weather Monitoring with Azure
-[Part 1: Requirements and Data Architecture]()
+[Part 1: Requirements and Data Architecture](https://clumdee.github.io/blog/your-weather-station-with-azure-part1/)
 <br>
-[Part 2: Implementation](d)  **(We are here)**
+[Part 2: Implementation](https://clumdee.github.io/blog/your-weather-station-with-azure-part2/)  **(We are here)**
 
 
 ### Set up services for PATH 2
@@ -40,23 +40,23 @@ You should see data coming in when your IoT Online Simulator is running. <br>
 
 
 #### 2. Create Azure SQL Database
-- Follow instructions from Microsoft -- https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal. <br>
+- Follow instructions from Microsoft -- [https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal). <br>
 Doing so you will get a SQL Server with a SQL Database you specify in creation steps.
 Do not forget to take note of username and password of your SQL Server. <br>
 ![p2_2a1]({{ site.url }}/assets/img/weather_station_azure/p2_2a1.png) <br>
 ![p2_2a2]({{ site.url }}/assets/img/weather_station_azure/p2_2a2.png)
 
 - Go to your database and create a table with a correct schema for your data using Query Editor. Refresh the database and verify the table. <br>
-![p2_2b1]({{ site.url }}/assets/img/weather_station_azure/p2_2b1.png)
+![p2_2b1]({{ site.url }}/assets/img/weather_station_azure/p2_2b.png)
 
 - Take note of a connection string for your database. <br>
-![p2_2c1]({{ site.url }}/assets/img/weather_station_azure/p2_2c1.png)
+![p2_2c1]({{ site.url }}/assets/img/weather_station_azure/p2_2c.png)
 
 
 #### 3. Deploy Azure Functions
-- Set up your environment. At least make sure that your environment can complete this tutorial -- https://docs.microsoft.com/en-us/azure/developer/python/tutorial-vs-code-serverless-python-01.
+- Set up your environment. At least make sure that your environment can complete this tutorial -- [https://docs.microsoft.com/en-us/azure/developer/python/tutorial-vs-code-serverless-python-01](https://docs.microsoft.com/en-us/azure/developer/python/tutorial-vs-code-serverless-python-01).
 
-- Create a new Azure Functions that accept IoT Hub Trigger -- https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-iot-trigger?tabs=python.
+- Create a new Azure Functions that accept IoT Hub Trigger -- [https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-iot-trigger?tabs=python](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-iot-trigger?tabs=python).
 
 - Add IoT Hub’s name and consumer group from (1e) to function.json in Azure Functions’ package.
 
@@ -152,7 +152,7 @@ When all pieces are available. You can send data from actual sensors. <br>
 
 
 #### Extra: Quick look at Azure Stream Analytics and Power BI
-Additional steps to implement PATH 3: One can simply follow the tutorial -- https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi.
+Additional steps to implement PATH 3: One can simply follow the tutorial -- [https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-power-bi).
 
 Here is my attempt
 - Set Input. <br>
@@ -174,4 +174,4 @@ Here is my attempt
 ### End
 That concludes implementation steps of our project.
 
-Hope you have fun. I really did :)
+Hope you have fun. I did :)
