@@ -65,6 +65,5 @@ I chose PATH 2 as my long-term implementation. So I will be going through the im
 Anyhow, I would recommend trying all the 3 paths. And other solutions. It was a lot of fun learning these wonderful services.
 
 ### End
-That concludes the requirements and data architecture of our project.
-
+That concludes the requirements and data architecture of our project. <br>
 We will go through the implementation steps in the next post -- [Part 2: Implementation](https://clumdee.github.io/blog/your-weather-station-with-azure-part2/).
