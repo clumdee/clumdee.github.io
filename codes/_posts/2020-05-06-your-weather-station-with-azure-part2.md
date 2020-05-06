@@ -16,7 +16,7 @@ Note: I will use a Raspberry Pi Azure IoT Online Simulator to simulate HOME for 
 
 
 #### 1. Create and send test data to Azure IoT Hub
-- Follow instructions from Microsoft to create an IoT Hub resource -- https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal. <br>
+- Follow instructions from Microsoft to create an IoT Hub resource -- [https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal). <br>
 Your IoT Hub should look similar to this.
 ![p2_1a]({{ site.url }}/assets/img/weather_station_azure/p2_1a.png)
 - Add device to your IoT Hub. The device connection string is used to identify where the stream of data comes from.
@@ -125,11 +125,9 @@ def main(event: func.EventHubEvent):
 #### 4. Set up Grafana dashboard on your machine
 - Install Grafana. Depending on the version you would like to have.
 Here are instructions for the Open Source version (aka free version) -- [https://grafana.com/docs/grafana/latest/installation/](https://grafana.com/docs/grafana/latest/installation/).
-
 - Start your Grafana Server and add your Azure SQL Server (2a) as a data source.
 [https://grafana.com/docs/grafana/latest/features/datasources/mssql/](https://grafana.com/docs/grafana/latest/features/datasources/mssql/).
 ![p2_4b]({{ site.url }}/assets/img/weather_station_azure/p2_4b.png)
-
 - Verify your connection and start building your dashboard.
 ![p2_4c]({{ site.url }}/assets/img/weather_station_azure/p2_4c.png)
 
@@ -145,21 +143,16 @@ Additional steps to implement PATH 3: One can simply follow the tutorial -- [htt
 Here is my attempt
 - Set Input.
 ![p2_6a]({{ site.url }}/assets/img/weather_station_azure/p2_6a.png)
-
 - Set output.
 ![p2_6b]({{ site.url }}/assets/img/weather_station_azure/p2_6b.png)
-
 - Set query.
 ![p2_6c]({{ site.url }}/assets/img/weather_station_azure/p2_6c.png)
-
 - Run the Stream Analytics job and verify data in Power BI.
 ![p2_6d]({{ site.url }}/assets/img/weather_station_azure/p2_6d.png)
-
 - Build your Power BI dashboard.
 ![p2_6e]({{ site.url }}/assets/img/weather_station_azure/p2_6e.png)
 
 
 ### End
-That concludes implementation steps of our project.
-
-Hope you have fun. I did :)
+That concludes implementation steps of our project. <br>
+I hope you have fun :)
