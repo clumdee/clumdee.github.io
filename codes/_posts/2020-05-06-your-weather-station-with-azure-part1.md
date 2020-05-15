@@ -9,6 +9,7 @@ categories: code_python
 [Part 1: Requirements and Data Architecture](https://clumdee.github.io/blog/your-weather-station-with-azure-part1/) **(We are here)**
 <br>
 [Part 2: Implementation](https://clumdee.github.io/blog/your-weather-station-with-azure-part2/)
+[Reference: GitHub Repo](https://github.com/clumdee/pi_azure_iot)
 
 ### Motivations
 1. Make use of a Raspberry Pi in a storage
