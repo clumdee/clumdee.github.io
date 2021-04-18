@@ -19,29 +19,3 @@ Let the fun begin ~
 	<img src="{{ '/assets/img/Me_doing_SEM.png' | prepend: site.baseurl }}" alt="">
 	<figcaption>Me while doing SEM for my paper in APL Photonics 2016 -- picture taken by my PhD advisor</figcaption>
 </figure>
-
-
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v10.0'
-    });
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- Your Chat Plugin code -->
-<div class="fb-customerchat"
-  attribution="page_inbox"
-  page_id="105767244947701">
-</div>
