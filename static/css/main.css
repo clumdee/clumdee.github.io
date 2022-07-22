@@ -179,7 +179,11 @@ hr.light {
     padding: 1rem;
 }
 
-
+/*--- Add background color to codeblock --*/
+pre {
+  padding: 1rem;
+  background-color: #d5d5d5b8;
+}
 
 
 
