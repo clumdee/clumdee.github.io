@@ -1,0 +1,25 @@
+---
+layout: base
+---
+
+<!--- Jumbotron -->
+<div class="container">
+    <div class="row jumbotron text-center d-flex align-items-center">
+        <!-- specify grid columns to occupy at different media's sizes, adding col-x with no size will act as default -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+            <p class="lead">
+                99 little bugs in the code. 99 little bugs in the code. <br>
+                Take one down, patch it around. 127 little bugs in the code …
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <a href="{{ site.social.github }}" class="btn btn-outline-secondary btn-lg my-1">GitHub <i class="fab fa-github"></i></a>
+            <a href="{{ site.social.linkedin }}" class="btn btn-outline-secondary btn-lg my-1">LinkedIn <i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+
+<!--- List -->
+<div class="container">
+    {{content}}
+</div>
