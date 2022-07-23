@@ -1,0 +1,57 @@
+---
+layout: base
+---
+
+<!--- Jumbotron -->
+<div class="container">
+    <div class="row jumbotron text-center d-flex align-items-center">
+        <!-- specify grid columns to occupy at different media's sizes, adding col-x with no size will act as default -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+            <p class="lead" id="opening-quote">
+                
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <a href="{{ site.social.github }}" class="btn btn-outline-secondary btn-lg my-1">GitHub <i class="fab fa-github"></i></a>
+            <a href="{{ site.social.linkedin }}" class="btn btn-outline-secondary btn-lg my-1">LinkedIn <i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <h1>{{ page.title }}</h1>
+    <h4 class="text-muted">{{ page.date | date_to_long_string }}</h4>
+    
+    {{content}}
+</div>
+
+
+
+<script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+
+<script type="text/javascript">
+    let qText = document.getElementById("opening-quote")
+
+    function getQuote() {
+        return fetch('https://type.fit/api/quotes').then(response => {
+            return response.json()
+        })
+            .then(jsonResponse => {
+                if (!jsonResponse.length) {
+                    return []
+                }
+                return jsonResponse[Math.floor(Math.random() * jsonResponse.length)]
+            })
+    }
+
+    getQuote().then(quote => {
+        const text = quote.text;
+        const author = quote.author;
+        qText.innerText = text;
+    })
+</script>

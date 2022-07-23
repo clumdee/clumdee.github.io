@@ -1,5 +1,5 @@
 ---
-layout: post_optics
+layout: post
 title: "Near-field optical chirality by electric dipoles"
 date: 2017-04-22
 category: optics
@@ -161,6 +161,3 @@ ax.set_zlim([-boxlim,boxlim])
 ax.view_init(elev=45, azim=45)
 
 ```
-
-
-![png]({{ site.url }}/optics/img/nearfieldChiral.gif)
