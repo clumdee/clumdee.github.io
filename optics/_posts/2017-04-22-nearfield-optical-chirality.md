@@ -33,7 +33,7 @@ The code was developed based on two articles: [M. Schaferling, OptEx 2012](https
 
 
 #### Import libraries
-The *chital_local* function is home-written and is provided [here]({{ site.url }}/blog/nearfield-optical-chirality_note).
+The *chital_local* function is home-written and is provided [here]({{ site.url }}/optics/supp/2017-04-22-nearfield-optical-chirality_note).
 
 ```python
 %matplotlib notebook
