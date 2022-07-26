@@ -5,8 +5,8 @@ date: 2020-02-16
 category: optics
 ---
 
-<div>
-  <img width="100%" src="{{ site.url }}/optics/img/demo_transfer_matrix/cover.png">
+<div class="my-4 text-center">
+  <img class="w-75" src="{{ site.url }}/optics/img/demo_transfer_matrix/cover.png">
 </div>
 
 ## Introduction
@@ -36,6 +36,8 @@ Click below to launch an interactive demo notebook on [binder](https://mybinder.
   caption='Demo interface at startup.'
 %}
 
+---
+
 #### Example 2: R / T Heatmaps based on User's Input
 <!-- ![transfer_matrix_heatmaps]({{ site.url }}/assets/img/demo_transfer_matrix/heatmaps.png) -->
 {% include image.html
@@ -43,6 +45,8 @@ Click below to launch an interactive demo notebook on [binder](https://mybinder.
   title='transfer_matrix_heatmaps'
   caption='R / T Heatmaps of a thin film stack as user specified.'
 %}
+
+---
 
 #### Example 3: Wavelength Slicer
 <!-- ![transfer_matrix_wavelength_slice]({{ site.url }}/assets/img/demo_transfer_matrix/wavelength_slice.png) -->
