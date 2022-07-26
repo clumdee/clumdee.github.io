@@ -7,9 +7,9 @@ category: optics
 
 *<span class="small">The code was originally written in June 2016.</span>*
 
-
-![chiralNearFieldOfDipole]({{ site.url }}/optics/img/nearfieldChiral.gif)
-
+<div class="my-4 text-center">
+  <img class="w-75" src="{{ site.url }}/optics/img/nearfieldChiral.gif">
+</div>
 
 ## Near-field optical chirality
 
