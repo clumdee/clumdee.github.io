@@ -6,7 +6,7 @@ name: Tua's Random Walk
 url: "https://clumdee.github.io"
 baseurl: ""
 base_canonical: "https://clumdee.github.io"
-permalink: 
+permalink: /:categories/:title
 
 social:
    email: "chatdanai.l@gmail.com"
