@@ -12,8 +12,8 @@
     let navItems = Array.from(document.querySelectorAll(".nav-item"))
     // loop .nav-item -- set .active if it is in use
     for (let item of navItems) {
-        // check if {{ page.category }} === last word of item's text in lowercase format
-        if ("{{ page.category }}" === item.innerText.split(/[\s,]+/).pop().toLowerCase()) {
+        // check if {{ page.category }} === first word of nav-item's text in lowercase format
+        if ("{{ page.category }}" === item.innerText.split(/[\s,]+/)[0].toLowerCase()) {
             item.classList.add("active")
             break
         }
