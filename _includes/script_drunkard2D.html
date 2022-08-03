@@ -1,0 +1,53 @@
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3-timer.v1.min.js"></script>
+
+<script>
+  // adapted from https://bl.ocks.org/EmilienDupont/4da87ba851221f4ce150d798196da421
+  let width = document.getElementById("random2d").clientWidth,
+    height = screen.height * 0.25,
+    step_size = 10;
+
+  let svg = d3
+    .select("#random2d")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+  function get_sign() {
+    return Math.random() > 0.5 ? 1 : -1;
+  }
+
+  function take_step(position) {
+    let step = step_size * get_sign();
+    if (Math.random() > 0.5)
+      return {
+        x: Math.max(0, Math.min(width, position.x + step)),
+        y: position.y,
+      };
+    return {
+      x: position.x,
+      y: Math.max(0, Math.min(height, position.y + step)),
+    };
+  }
+
+  function add_line(position, next_position, colour) {
+    svg
+      .append("line")
+      .attr("x1", position.x)
+      .attr("y1", position.y)
+      .attr("x2", next_position.x)
+      .attr("y2", next_position.y)
+      .attr("stroke", colour)
+      .attr("stroke-width", 5);
+  }
+
+  let pos = { x: width / 2, y: height / 2 };
+  let next_pos;
+  let counter = 0;
+
+  d3.interval(function () {
+    next_pos = take_step(pos);
+    add_line(pos, next_pos, d3.hsl((counter = (counter + 1) % 360), 1, 0.5));
+    pos = next_pos;
+  }, 10);
+</script>

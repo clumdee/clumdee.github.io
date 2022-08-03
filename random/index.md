@@ -17,7 +17,7 @@ canonical_url: /random/
         </button>
       </h5>
     </div>
-    <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordionExample">
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
       <div class="card-body">
         To be filled ...
       </div>
@@ -99,6 +99,13 @@ canonical_url: /random/
     </div>
   </div>
 </div>
+
+---
+
+##### Drunkard's walk in 2D (adapted from [here](https://bl.ocks.org/EmilienDupont/4da87ba851221f4ce150d798196da421))
+
+<div id="random2d" class="bg-secondary my-4"></div>
+{% include script_drunkard2D.html %}
 
 ---
 
