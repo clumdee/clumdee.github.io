@@ -10,12 +10,10 @@ category: coding
   alt="weather_station_data_architecture">
 </div>
 
-## Project: Your Home in the Cloud - Weather Monitoring with Azure
-[Part 1: Requirements and Data Architecture]({{ site.url }}/coding/your-weather-station-with-azure-part1/) **(We are here)**
-<br>
-[Part 2: Implementation]({{ site.url }}/coding/your-weather-station-with-azure-part2/)
-<br>
-[Reference: GitHub Repo](https://github.com/clumdee/pi_azure_iot)
+## Project: Your Home in the Cloud - Weather Monitoring with Azure  
+- [Part 1: Requirements and Data Architecture]({{ site.url }}/coding/your-weather-station-with-azure-part1) **(We are here)**
+- [Part 2: Implementation]({{ site.url }}/coding/your-weather-station-with-azure-part2)
+- [Reference: GitHub Repo](https://github.com/clumdee/pi_azure_iot)
 
 ### Motivations
 1. Make use of a Raspberry Pi in a storage
@@ -114,4 +112,4 @@ Anyhow, I would recommend trying all the 3 paths. And other solutions. It was a 
 
 ### End
 That concludes the requirements and data architecture of our project. <br>
-We will go through the implementation steps in the next post -- [Part 2: Implementation]({{ site.url }}/coding/your-weather-station-with-azure-part2/).
+We will go through the implementation steps in the next post -- [Part 2: Implementation]({{ site.url }}/coding/your-weather-station-with-azure-part2).

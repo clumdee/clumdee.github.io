@@ -11,11 +11,9 @@ category: coding
 </div>
 
 ## Project: Your Home in the Cloud - Weather Monitoring with Azure
-[Part 1: Requirements and Data Architecture](https://clumdee.github.io/blog/your-weather-station-with-azure-part1/)
-<br>
-[Part 2: Implementation](https://clumdee.github.io/blog/your-weather-station-with-azure-part2/)  **(We are here)**
-<br>
-[Reference: GitHub Repo](https://github.com/clumdee/pi_azure_iot)
+- [Part 1: Requirements and Data Architecture]({{ site.url }}/coding/your-weather-station-with-azure-part1)
+- [Part 2: Implementation]({{ site.url }}/coding/your-weather-station-with-azure-part2)  **(We are here)**
+- [Reference: GitHub Repo](https://github.com/clumdee/pi_azure_iot)
 
 
 ### Set up services for PATH 2
