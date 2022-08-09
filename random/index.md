@@ -6,7 +6,7 @@ category: random
 canonical_url: /random/
 ---
 
-##### Drunkard's walk
+##### Drunkard's walk <a href="{{ site.url }}/static/etc/ChatdanaiLumdee_202207.pdf" class="btn btn-sm btn-success">CV</a>
 
 <div class="accordion" id="accordionExample">
   <div class="card">
