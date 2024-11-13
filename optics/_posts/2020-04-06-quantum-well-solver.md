@@ -23,7 +23,7 @@ We hope the demo can help students, as well as professionals, to improve their u
 
 Click below to launch an interactive demo notebook on [binder](https://mybinder.org/).  
 *The demo is written in Python. Source code is available on [GitHub](https://github.com/clumdee/quantum_well_solver).*  
-<a class="btn btn-success text-white" href="https://mybinder.org/v2/gh/clumdee/quantum_well_solver/master?urlpath=tree/QW_solver.ipynb">Launch Binder</a>
+<a class="btn btn-success text-white" href="https://mybinder.org/v2/gh/clumdee/quantum_well_solver/main?labpath=QW_solver.ipynb">Launch Binder</a>
 
 *Core part of the code came from this [class project](https://clumdee.github.io/talks/talks-pdf/2010-05-XX_ClassProject_NumerModelRectQD.pdf).
 For those with technical interests, we used this [paper](https://github.com/clumdee/quantum_well_solver/blob/master/1990_JAP_Schrodinger-Poisson.pdf) as a reference.*

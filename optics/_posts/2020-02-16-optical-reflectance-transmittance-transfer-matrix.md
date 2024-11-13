@@ -23,7 +23,7 @@ We hope the demo can help students, as well as professionals, to improve their u
 
 Click below to launch an interactive demo notebook on [binder](https://mybinder.org/).  
 *The demo is written in Python. Source code is available on [GitHub](https://github.com/clumdee/transfer_matrix).*  
-<a class="btn btn-success text-white" href="https://mybinder.org/v2/gh/clumdee/transfer_matrix/master?urlpath=tree/demo_minimal.ipynb">Launch Binder</a>
+<a class="btn btn-success text-white" href="https://mybinder.org/v2/gh/clumdee/transfer_matrix/main?labpath=demo_minimal.ipynb">Launch Binder</a>
 
 --- 
 
