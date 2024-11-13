@@ -38,19 +38,13 @@ layout: base
     let qText = document.getElementById("opening-quote")
 
     function getQuote() {
-        return fetch('https://type.fit/api/quotes').then(response => {
+        return fetch('https://quoteslate.vercel.app/api/quotes/random').then(response => {
             return response.json()
         })
-            .then(jsonResponse => {
-                if (!jsonResponse.length) {
-                    return []
-                }
-                return jsonResponse[Math.floor(Math.random() * jsonResponse.length)]
-            })
     }
 
     getQuote().then(quote => {
-        const text = quote.text;
+        const text = quote.quote;
         const author = quote.author;
         qText.innerText = text;
     })
