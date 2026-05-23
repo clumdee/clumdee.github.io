@@ -16,14 +16,6 @@ og_type: article
             <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
             {% if page.category %} &middot; <a href="{{ site.baseurl }}/{{ page.category }}/" class="capitalize">{{ page.category }}</a>{% endif %}
         </p>
-        <div class="mt-5 flex flex-wrap gap-2">
-            <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-modern">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn-modern">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-        </div>
     </div>
 </header>
 
