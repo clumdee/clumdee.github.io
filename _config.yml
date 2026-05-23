@@ -17,6 +17,7 @@ social:
 google_analytics: "G-NG12M3TDGG"
 
 exclude:
+  # Claude / agent files
   - CLAUDE.md
   - CLAUDE.local.md
   - .claude/
@@ -28,3 +29,21 @@ exclude:
   - .cursor/
   - .cursorrules
   - .github/copilot-instructions.md
+
+  # Build tooling / source assets — never serve these
+  - bin/
+  - tailwind.config.js
+  - static/css/tailwind.input.css
+
+  # Jekyll defaults — re-listed because a custom `exclude:` replaces them
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - .sass-cache/
+  - .jekyll-cache/
+
+  # Scratch dir (also gitignored)
+  - wip/
