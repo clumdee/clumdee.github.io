@@ -8,7 +8,7 @@ canonical_url: /random/
 
 <div class="flex items-center gap-3 mb-6">
   <h2 class="text-2xl font-semibold text-ink m-0">Drunkard's walk</h2>
-  <a href="{{ site.url }}/static/etc/ChatdanaiLumdee_202307.pdf" class="btn-modern" target="_blank" rel="noopener noreferrer">CV</a>
+  <a href="{{ site.social.cv | prepend: site.baseurl }}" class="btn-modern" target="_blank" rel="noopener noreferrer">CV</a>
 </div>
 
 <div class="divide-y divide-gray-200 border border-gray-200 rounded-lg overflow-hidden bg-white">
