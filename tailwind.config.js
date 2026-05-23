@@ -51,6 +51,15 @@ module.exports = {
           'Roboto',
           'sans-serif',
         ],
+        serif: [
+          '"Source Serif 4"',
+          '"Iowan Old Style"',
+          'Georgia',
+          '"Times New Roman"',
+          'Times',
+          '"Prompt"',
+          'serif',
+        ],
         mono: [
           '"JetBrains Mono"',
           'ui-monospace',

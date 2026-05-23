@@ -147,6 +147,16 @@ details[open] > summary::before {
 .prose table { display: block; overflow-x: auto; }
 .prose iframe { max-width: 100%; }
 
+/* Serif body, sans headings — only inside .prose blocks (post bodies, talks).
+   Thai glyphs aren't in Source Serif 4, so the browser falls through to
+   Prompt automatically via the font-family stack. */
+.prose {
+  font-family: theme('fontFamily.serif');
+}
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: theme('fontFamily.sans');
+}
+
 /* prose-neutral overrides — force light code blocks instead of the plugin's dark default */
 .prose-neutral, .prose {
   --tw-prose-pre-bg: #f4f4f5;
