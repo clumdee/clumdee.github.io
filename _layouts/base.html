@@ -7,20 +7,15 @@ og_type: website
 
 {% include head.html %}
 
-<body>
-
-    
+<body class="min-h-screen flex flex-col" data-page-category="{{ page.category }}">
     {% include navbar.html %}
 
+    <main class="flex-1">
+        {{ content }}
+    </main>
 
-    <!-- Home content -->
-    {{content}}
-
-    
     {% include footer.html %}
 
     {% include script.html %}
-    
-
 </body>
 </html>

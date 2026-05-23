@@ -5,3 +5,4 @@ _site/
 Gemfile.lock
 wip/
 *.DS_Store
+bin/tailwindcss

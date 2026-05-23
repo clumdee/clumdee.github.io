@@ -1,20 +1,43 @@
-<!-- Navigation -->
-<nav class="container navbar navbar-expand-md navbar-light bg-white xsticky-top border-bottom">
-    <a class="navbar-brand" href="{{ site.baseurl }}/"><h4>{{ site.title }}</h4></a>
+<!-- Site navigation -->
+<nav class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-200">
+    <div class="mx-auto max-w-6xl px-4">
+        <div class="flex items-center justify-between h-16">
+            <a href="{{ site.baseurl }}/" class="flex items-center gap-2 text-lg font-semibold text-ink hover:text-accent transition">
+                {{ site.title }}
+            </a>
 
+            <!-- Mobile toggle -->
+            <button id="nav-toggle"
+                    type="button"
+                    class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-ink hover:bg-gray-100 transition min-h-[44px] min-w-[44px]"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <svg id="nav-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg id="nav-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="hidden h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <!-- set .active using JS by matching {{ site.category }} -->
-            <!-- <li class="nav-item active"><a class="nav-link mx-0" href="{{ site.baseurl }}/">Home</a></li> -->
-            <li class="nav-item"><a class="nav-link mx-0" href="{{ site.baseurl }}/">Home</a></li>
-            <li class="nav-item"><a class="nav-link px-0" href="{{ site.baseurl }}/optics/">Optics</a></li>
-            <li class="nav-item"><a class="nav-link px-0" href="{{ site.baseurl }}/coding/">Coding</a></li>
-            <li class="nav-item"><a class="nav-link px-0" href="{{ site.baseurl }}/talks/">Talks</a></li>
-            <li class="nav-item"><a class="nav-link px-0" href="{{ site.baseurl }}/random/">Random Walk</a></li>
+            <!-- Desktop menu -->
+            <ul class="hidden md:flex items-center gap-1">
+                <li><a class="nav-link-modern" href="{{ site.baseurl }}/">Home</a></li>
+                <li><a class="nav-link-modern" href="{{ site.baseurl }}/optics/">Optics</a></li>
+                <li><a class="nav-link-modern" href="{{ site.baseurl }}/coding/">Coding</a></li>
+                <li><a class="nav-link-modern" href="{{ site.baseurl }}/talks/">Talks</a></li>
+                <li><a class="nav-link-modern" href="{{ site.baseurl }}/random/">Random Walk</a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile menu panel -->
+        <ul id="nav-menu" class="hidden md:hidden pb-4 flex-col gap-1" data-state="closed">
+            <li><a class="nav-link-modern w-full" href="{{ site.baseurl }}/">Home</a></li>
+            <li><a class="nav-link-modern w-full" href="{{ site.baseurl }}/optics/">Optics</a></li>
+            <li><a class="nav-link-modern w-full" href="{{ site.baseurl }}/coding/">Coding</a></li>
+            <li><a class="nav-link-modern w-full" href="{{ site.baseurl }}/talks/">Talks</a></li>
+            <li><a class="nav-link-modern w-full" href="{{ site.baseurl }}/random/">Random Walk</a></li>
         </ul>
-    </div>  
+    </div>
 </nav>

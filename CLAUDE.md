@@ -15,6 +15,19 @@ bundle exec jekyll build   # writes _site/
 
 No Makefile, no `package.json`, no test suite, no linter. Built with the `github-pages` gem (see `Gemfile`) — only plugins on the GitHub Pages allowlist work. `Gemfile.lock` is intentionally gitignored so GH Pages controls versions.
 
+## Build CSS (Tailwind)
+
+Styling is **Tailwind v3** compiled by the standalone CLI binary at `bin/tailwindcss` (gitignored — re-download per [tailwindcss-macos-arm64 v3.4.17 release](https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.17) on a fresh checkout).
+
+```sh
+./bin/build-css.sh             # one-shot build
+./bin/build-css.sh --watch     # rebuild on changes (run alongside jekyll serve)
+```
+
+The build reads [`tailwind.config.js`](tailwind.config.js) and [`static/css/tailwind.input.css`](static/css/tailwind.input.css), writes minified output to [`static/css/main.css`](static/css/main.css). **Commit `static/css/main.css`** — GitHub Pages serves it as-is; it has no build step on their side.
+
+`tailwind.input.css` includes a **Bootstrap-compatibility shim** in `@layer components` that aliases the Bootstrap 4 utility classes still embedded in `_posts/*.md` (`.w-75`, `.text-center`, `.my-4`, `.btn`, `.jumbotron`, `.d-flex`, `.col-*`, …). Do not delete this layer without first auditing post bodies.
+
 ## Content model
 
 Posts live in **per-category `_posts/` dirs**, one dir per category:

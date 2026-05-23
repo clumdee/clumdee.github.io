@@ -1,24 +1,32 @@
-<!-- Footer -->
-<footer id="channels" class="bg-light text-dark py-0">
-    <div class="container py-2">
-        <div class="row">
-            <div class="col-12 text-right">
-                <h5 class="text-uppercase">Let's Connect</h5>
-                <ul class="nav float-right">
-                    <li><a class="text-dark footer_icon mr" href="{{ site.social.github }}" target="_blank" 
-                        title="GitHub"><i class="h1 fab fa-fw fa-github fa-3x"></i></a>
-                    </li>
-                    <li><a class="text-dark footer_icon mr" href="{{ site.social.linkedin }}" target="_blank" 
-                        title="LinkedIn"><i class="h1 fab fa-fw fa-linkedin fa-3x"></i></a>
-                    </li>
-                    <li><a class="text-dark footer_icon mr" href="{{ site.social.googlescholar }}" target="_blank" 
-                        title="Publications"><i class="h1 fa fa-fw fa-book fa-3x"></i></a>
-                    </li>
-                    <li><a class="text-dark footer_icon mr" href="mailto: {{ site.social.email }}" target="_blank" 
-                        title="Email"><i class="h1 fas fa-fw fa-paper-plane fa-3x"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<!-- Site footer -->
+<footer class="mt-16 border-t border-gray-200 bg-gray-50">
+    <div class="mx-auto max-w-6xl px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-meta">&copy; {{ 'now' | date: '%Y' }} {{ site.name }}</p>
+        <ul class="flex items-center gap-5">
+            <li>
+                <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" title="GitHub"
+                   class="inline-flex items-center justify-center w-11 h-11 text-ink hover:text-accent transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn"
+                   class="inline-flex items-center justify-center w-11 h-11 text-ink hover:text-accent transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.social.googlescholar }}" target="_blank" rel="noopener noreferrer" title="Publications"
+                   class="inline-flex items-center justify-center w-11 h-11 text-ink hover:text-accent transition">
+                    <i class="fas fa-book text-2xl"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:{{ site.social.email }}" title="Email"
+                   class="inline-flex items-center justify-center w-11 h-11 text-ink hover:text-accent transition">
+                    <i class="fas fa-paper-plane text-2xl"></i>
+                </a>
+            </li>
+        </ul>
     </div>
 </footer>

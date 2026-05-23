@@ -1,22 +1,40 @@
-<!-- Display Image caption in Posts on Jekyll blogs -->
-<!-- based on https://superdevresources.com/image-caption-jekyll/ -->
+{% comment %}
+  Image template.
 
-<!-- _includes/image.html -->
-<div class="text-center" >
+  Args:
+    img      (required) - path relative to site root, e.g. coding/img/foo.png
+    title    (optional) - tooltip and link title
+    alt      (optional) - alt text; falls back to title
+    caption  (optional) - figcaption (renders as italic, muted, centered)
+    url      (optional) - if present, image is wrapped in an <a target="_blank">
+    width    (optional) - one of sm | md | lg (default) | xl | full
+    align    (optional) - one of left | center (default) | right
 
-    {% if include.url %}
-    <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
-    {% endif %}
-
-    <img class="w-100" src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}"/>
-    <!-- <img src="{{ include.img }}" alt="{{ include.title }}"/> -->
-
-    {% if include.url %}
-    </a>
-    {% endif %}
-
-    {% if include.caption %}
-        <p class="image-caption">{{ include.caption }}</p>
-    {% endif %}
-
-</div>
+  Backward-compatible with old callsites that only set img/title/caption/url.
+{% endcomment %}
+{%- assign _alt = include.alt | default: include.title -%}
+{%- case include.width -%}
+  {%- when 'sm' -%}    {%- assign _maxw = 'max-w-sm' -%}
+  {%- when 'md' -%}    {%- assign _maxw = 'max-w-md' -%}
+  {%- when 'xl' -%}    {%- assign _maxw = 'max-w-3xl' -%}
+  {%- when 'full' -%}  {%- assign _maxw = 'max-w-full' -%}
+  {%- else -%}         {%- assign _maxw = 'max-w-2xl' -%}
+{%- endcase -%}
+{%- case include.align -%}
+  {%- when 'left' -%}   {%- assign _align = 'mr-auto ml-0 text-left' -%}
+  {%- when 'right' -%}  {%- assign _align = 'ml-auto mr-0 text-right' -%}
+  {%- else -%}          {%- assign _align = 'mx-auto text-center' -%}
+{%- endcase -%}
+<figure class="my-6 {{ _maxw }} {{ _align }}">
+  {%- if include.url %}<a href="{{ include.url }}" title="{{ include.title }}" target="_blank" rel="noopener noreferrer">{% endif -%}
+  <img
+    src="{{ site.url }}/{{ include.img }}"
+    alt="{{ _alt }}"
+    loading="lazy"
+    decoding="async"
+    class="rounded-md shadow-sm w-full h-auto" />
+  {%- if include.url %}</a>{% endif -%}
+  {%- if include.caption %}
+  <figcaption class="mt-2 text-sm text-meta italic">{{ include.caption }}</figcaption>
+  {%- endif %}
+</figure>

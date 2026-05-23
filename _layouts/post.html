@@ -1,51 +1,38 @@
 ---
 layout: base
+og_type: article
 ---
 
-<!--- Jumbotron -->
-<div class="container">
-    <div class="row jumbotron text-center d-flex align-items-center">
-        <!-- specify grid columns to occupy at different media's sizes, adding col-x with no size will act as default -->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-            <p class="lead" id="opening-quote">
-                <i>O Internet, please give us an inspirational quote ...</i>
-            </p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-            <a href="{{ site.social.github }}" class="btn btn-outline-secondary btn-lg my-1">GitHub <i class="fab fa-github"></i></a>
-            <a href="{{ site.social.linkedin }}" class="btn btn-outline-secondary btn-lg my-1">LinkedIn <i class="fab fa-linkedin"></i></a>
+<!-- Compact post header -->
+<header class="border-b border-gray-200 bg-gradient-to-b from-white to-gray-50">
+    <div class="mx-auto max-w-prose lg:max-w-3xl xl:max-w-4xl px-4 py-10 md:py-14">
+        <p id="opening-quote" class="text-base md:text-lg italic text-meta mb-6 min-h-[1.5em]">
+            <i>O Internet, please give us an inspirational quote &hellip;</i>
+        </p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-ink leading-tight tracking-tight">
+            {{ page.title }}
+        </h1>
+        <p class="mt-3 post-meta">
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
+            {% if page.category %} &middot; <a href="{{ site.baseurl }}/{{ page.category }}/" class="capitalize">{{ page.category }}</a>{% endif %}
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2">
+            <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-modern">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn-modern">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
         </div>
     </div>
-</div>
+</header>
 
+<!-- Post body — ~65ch on mobile/tablet for readability, widened on lg+ -->
+<article class="prose prose-neutral mx-auto max-w-prose lg:max-w-3xl xl:max-w-4xl px-4 py-10">
+    {{ content }}
+</article>
 
-
-<div class="container">
-    <h1>{{ page.title }}</h1>
-    <h4 class="text-muted">Created: {{ page.date | date_to_long_string }}</h4>
-    
-    {{content}}
-</div>
-
-
-
+<!-- MathJax (loaded lazily, after page paint) -->
 <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-
-<script type="text/javascript">
-    let qText = document.getElementById("opening-quote")
-
-    function getQuote() {
-        return fetch('https://quoteslate.vercel.app/api/quotes/random').then(response => {
-            return response.json()
-        })
-    }
-
-    getQuote().then(quote => {
-        const text = quote.quote;
-        const author = quote.author;
-        qText.innerText = text;
-    })
 </script>
