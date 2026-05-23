@@ -49,4 +49,4 @@ canonical_url: /random/
 
 <h2 class="text-2xl font-semibold text-ink mb-6">So random &hellip;</h2>
 
-{% include category_list.html category="random" %}
+{% include category_list.html category="random" intro="Things that don't fit a category." %}

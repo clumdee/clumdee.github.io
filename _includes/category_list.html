@@ -1,23 +1,31 @@
 {% comment %}
-  Render the posts of a category as a responsive card grid.
+  Render the posts of a category as a dense two-column date | title list.
 
   Args:
     category (required) - slug, e.g. "coding", "optics", "random"
+    intro    (optional) - one-line description shown above the list
 {% endcomment %}
 {%- assign _posts = site.categories[include.category] -%}
-{% if _posts and _posts.size > 0 %}
-<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="mx-auto max-w-3xl">
+  {% if include.intro %}
+    <p class="text-meta mb-8">{{ include.intro }}</p>
+  {% endif %}
+  {% if _posts and _posts.size > 0 %}
+  <ul class="divide-y divide-gray-200">
     {% for post in _posts %}
-    <a href="{{ post.url }}" class="post-card group">
-        <p class="post-meta mb-2">
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
-        </p>
-        <h3 class="text-lg md:text-xl font-semibold text-ink leading-snug group-hover:text-accent transition">
-            {{ post.title }}
-        </h3>
-    </a>
+    <li>
+      <a href="{{ post.url }}"
+         class="group flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-3">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}"
+              class="text-sm text-meta tabular-nums shrink-0 sm:w-32">
+          {{ post.date | date_to_string }}
+        </time>
+        <span class="text-ink group-hover:text-accent transition flex-1">{{ post.title }}</span>
+      </a>
+    </li>
     {% endfor %}
+  </ul>
+  {% else %}
+  <p class="text-meta italic">No posts here yet.</p>
+  {% endif %}
 </div>
-{% else %}
-<p class="text-meta italic">No posts here yet.</p>
-{% endif %}
